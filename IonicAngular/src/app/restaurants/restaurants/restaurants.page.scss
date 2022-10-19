@@ -1,0 +1,11 @@
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
