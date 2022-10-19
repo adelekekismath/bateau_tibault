@@ -28,6 +28,14 @@ const routes: Routes = [
     path: 'boats',
     loadChildren: () => import('./boats/boats.module').then( m => m.BoatsPageModule)
   },
+  {
+    path: 'recettes',
+    loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
+  },
+  {
+    path: 'single-recette',
+    loadChildren: () => import('./single-recette/single-recette.module').then( m => m.SingleRecettePageModule)
+  },
 
 ];
 
