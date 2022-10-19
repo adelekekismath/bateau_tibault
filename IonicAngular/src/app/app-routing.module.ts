@@ -12,6 +12,23 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'restaurants',
+    loadChildren: () => import('./restaurants/restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
+  },
+  {
+    path: 'single-restaurant',
+    loadChildren: () => import('./single-restaurant/single-restaurant.module').then( m => m.SingleRestaurantPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },  
+  {
+    path: 'boats',
+    loadChildren: () => import('./boats/boats.module').then( m => m.BoatsPageModule)
+  },
+
 ];
 
 @NgModule({
