@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +8,25 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private router: Router) {}
-
+  constructor(private router : Router) {
+    
+  }
   onGoToBoats(){
     this.router.navigate(['/boats']);
   }
 
+  Navigation(NomPage){
+    if(NomPage == "Contact")
+    {
+     this.router.navigate(['/Contact'])
+    }
+    if(NomPage == "restaurants")
+    {
+      this.router.navigate(['/restaurants'])
+    }
+    if(NomPage == "contact")
+    {
+      this.router.navigate(['/contact'])
+    }
+   }
 }
