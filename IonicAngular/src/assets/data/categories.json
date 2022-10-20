@@ -35,50 +35,7 @@
                 "comments": "Plus de 1.5kg le poisson",
                 "owner": "tig"
             },
-            {
-                "id": 2,
-                "name": "Bar de ligne portion",
-                "price": 10.0,
-                "unit": "pièce",
-                "availability": true,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "Environ 550-700g la pièce",
-                "owner": "tig"
-            },
-            {
-                "id": 10,
-                "name": "Bouquets cuits",
-                "price": 8.0,
-                "unit": "100g",
-                "availability": false,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "Hors saison, pêche à l'épuisette",
-                "owner": "tig"
-            },
-            {
-                "id": 1,
-                "name": "Filet Bar de ligne",
-                "price": 7.0,
-                "unit": "2 filets",
-                "availability": true,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "environ 300g",
-                "owner": "tig"
-            },
-            {
-                "id": 5,
-                "name": "Filet Julienne",
-                "price": 19.0,
-                "unit": "kg",
-                "availability": false,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "Pêche à la corde",
-                "owner": "tig"
-            },
+           
             {
                 "id": 7,
                 "name": "Huitres N°2 St Vaast",
@@ -144,7 +101,65 @@
                 "discount": 0.0,
                 "comments": "",
                 "owner": "tig"
+            }
+            
+        ]
+
+    },
+
+    {
+        "name": "Fruit de mer",
+        "produts": [
+            {
+                "id": 2,
+                "name": "Bar de ligne portion",
+                "price": 10.0,
+                "unit": "pièce",
+                "availability": true,
+                "sale": false,
+                "discount": 0.0,
+                "comments": "Environ 550-700g la pièce",
+                "owner": "tig"
             },
+            {
+                "id": 10,
+                "name": "Bouquets cuits",
+                "price": 8.0,
+                "unit": "100g",
+                "availability": false,
+                "sale": false,
+                "discount": 0.0,
+                "comments": "Hors saison, pêche à l'épuisette",
+                "owner": "tig"
+            },
+            {
+                "id": 1,
+                "name": "Filet Bar de ligne",
+                "price": 7.0,
+                "unit": "2 filets",
+                "availability": true,
+                "sale": false,
+                "discount": 0.0,
+                "comments": "environ 300g",
+                "owner": "tig"
+            },
+            {
+                "id": 5,
+                "name": "Filet Julienne",
+                "price": 19.0,
+                "unit": "kg",
+                "availability": false,
+                "sale": false,
+                "discount": 0.0,
+                "comments": "Pêche à la corde",
+                "owner": "tig"
+            }
+        ]
+    },
+
+    {
+        "name":"Crustacé",
+        "products": [
             {
                 "id": 4,
                 "name": "Lieu jaune de ligne",
@@ -168,7 +183,6 @@
                 "owner": "tig"
             }
         ]
-
     }
 
 ]
