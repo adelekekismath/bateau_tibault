@@ -28,22 +28,6 @@ const routes: Routes = [
     path: 'boats',
     loadChildren: () => import('./boats/boats.module').then( m => m.BoatsPageModule)
   },
-  {
-    path: 'category',
-    loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
-  },
-  {
-    path: 'single-boat',
-    loadChildren: () => import('./single-boat/single-boat.module').then( m => m.SingleBoatPageModule)
-  },
-  {
-    path: 'products',
-    loadChildren: () => import('./products/products.module').then( m => m.ProductsPageModule)
-  },
-  {
-    path: 'shop',
-    loadChildren: () => import('./shop/shop.module').then( m => m.ShopPageModule)
-  },
 
 ];
 

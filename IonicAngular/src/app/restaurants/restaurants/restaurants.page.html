@@ -5,9 +5,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
+  <swiper [autoplay]="true" [keyboard]="true" [pagination]="true" [scrollbar]="true" [zoom]="true">
+      <ng-template  *ngFor = "let restaurant of restaurantsList"  swiperSlide>
+        <ion-card (click)="descriptionPage(restaurant)"  >
+          <img alt="Silhouette of mountains" src='{{restaurant.image}}'/>
+          <ion-card-header>
+            <ion-card-title>{{restaurant.name}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ng-template>
+    </swiper>
+  
+  <!-- <ion-grid>
     <ion-row *ngFor = "let restaurant of restaurantsList">
     <ion-button fill="outline" (click)="descriptionPage(restaurant)">{{restaurant.name}}</ion-button>
     </ion-row>
-    </ion-grid>
+    </ion-grid> -->
 </ion-content>

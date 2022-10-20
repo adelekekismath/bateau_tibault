@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { RecettesPageRoutingModule } from './recettes-routing.module';
-import { RecettesPage } from './recettes.page';
+
+import { SingleRecettePageRoutingModule } from './single-recette-routing.module';
+
+import { SingleRecettePage } from './single-recette.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecettesPageRoutingModule
+    SingleRecettePageRoutingModule
   ],
-  declarations: [RecettesPage]
+  declarations: [SingleRecettePage]
 })
-export class RecettesPageModule {}
+export class SingleRecettePageModule {}

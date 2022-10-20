@@ -16,10 +16,6 @@ export class HomePage {
   }
 
   Navigation(NomPage){
-    if(NomPage == "Contact")
-    {
-     this.router.navigate(['/Contact'])
-    }
     if(NomPage == "restaurants")
     {
       this.router.navigate(['/restaurants'])
