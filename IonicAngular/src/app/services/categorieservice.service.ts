@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CategorieserviceService {
+export class CategoryService {
 
   constructor(private http : HttpClient) { }
-  getcategrie(){
+  getCategory(){
     return this.http.get("./assets/data/categories.json"); 
   }
 }

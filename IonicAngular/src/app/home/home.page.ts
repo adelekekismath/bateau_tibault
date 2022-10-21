@@ -11,18 +11,9 @@ export class HomePage {
   constructor(private router : Router) {
     
   }
-  onGoToBoats(){
-    this.router.navigate(['/boats']);
+  onGoToPage(link:string){
+    this.router.navigate([link]);
   }
 
-  Navigation(NomPage){
-    if(NomPage == "restaurants")
-    {
-      this.router.navigate(['/restaurants'])
-    }
-    if(NomPage == "contact")
-    {
-      this.router.navigate(['/contact'])
-    }
-   }
+ 
 }

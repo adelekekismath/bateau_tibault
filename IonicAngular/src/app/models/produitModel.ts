@@ -9,4 +9,8 @@ export class produitModel{
     discount: number ;
     comments: string;
     owner: string 
+
+    constructor(id : number ){
+
+    }
 }

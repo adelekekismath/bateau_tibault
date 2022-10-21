@@ -10,18 +10,20 @@ import { RecettesService } from '../services/recettes.service';
 })
 export class RecettesPage implements OnInit {
 
-  recettesList: any;
+  recettesList: Recette[];
 
   constructor(private router: Router, private service: RecettesService) { }
 
   ngOnInit() { 
     this.service.getRecettes().subscribe(res =>{
-      this.recettesList = res ;
-      console.log(this.recettesList); 
+      this.recettesList = <any>res ;
+    },
+    err=>{
+      console.log("error")
     })
    }
 
-  onLoadRecette(recette : {name : string , description : string}) {
+  onLoadRecette(recette : {name: string , description: string , image: string}) {
     let navigationExtras : NavigationExtras = {
       state : {recette : recette}
     };

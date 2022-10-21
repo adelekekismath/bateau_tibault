@@ -20,20 +20,20 @@
  <ion-grid>
     <ion-row fixed padding>
       <ion-col>
-        <ion-button style="text-transform:none!important;" color="bleubutton">Produits<ion-icon name="cart-outline"></ion-icon></ion-button>
+        <ion-button style="text-transform:none!important;" (click)="onGoToPage('/category')" color="bleubutton">Produits<ion-icon name="cart-outline"></ion-icon></ion-button>
   
       </ion-col>
 <ion-col>
-  <ion-button style="text-transform:none!important;" color="beige" (click)="Navigation('restaurants')">Restaurants<ion-icon name="restaurant-outline"></ion-icon></ion-button>
+  <ion-button style="text-transform:none!important;" color="beige" (click)="onGoToPage('/restaurants')">Restaurants<ion-icon name="restaurant-outline"></ion-icon></ion-button>
 
 </ion-col>
 </ion-row>
 <ion-row>
   <ion-col>
-    <ion-button style="text-transform:none!important;" (click)="onGoToBoats()" color="beige">Bateaux<ion-icon name="boat-outline"></ion-icon></ion-button>
+    <ion-button style="text-transform:none!important;" (click)="onGoToPage('/boats')" color="beige">Bateaux<ion-icon name="boat-outline"></ion-icon></ion-button>
  
   </ion-col>
  <ion-col>
-  <ion-button style="text-transform:none!important;" color="bleubutton">Recettes<ion-icon name="fish-outline"></ion-icon></ion-button>
+  <ion-button style="text-transform:none!important;" (click)="onGoToPage('/recettes')"  color="bleubutton">Recettes<ion-icon name="fish-outline"></ion-icon></ion-button>
  </ion-col>
 </ion-row>

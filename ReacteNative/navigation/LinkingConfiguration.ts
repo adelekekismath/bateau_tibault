@@ -25,6 +25,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               RestaurantScreen: 'Restaurant',
             },
           },
+          ProductsCategories: {
+            screens: {
+              ProductsCategoriesScreen: 'ProductsCategories',
+            },
+          },
           
         },
       },

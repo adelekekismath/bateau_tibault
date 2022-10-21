@@ -8,8 +8,11 @@ import { BoatsPageRoutingModule } from './boats-routing.module';
 
 import { BoatsPage } from './boats.page';
 
+import { SharedModule } from '../shared/shared.module';
+
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     FormsModule,
     IonicModule,

@@ -1,16 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>restaurants</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [title]="'Restaurants'" ></app-header>
 
 <ion-content>
-  <swiper [autoplay]="true" [keyboard]="true" [pagination]="true" [scrollbar]="true" [zoom]="true">
+  <swiper class="banner-slides" [autoplay]="true" [keyboard]="true" [pagination]="true" [scrollbar]="true" [zoom]="true">
       <ng-template  *ngFor = "let restaurant of restaurantsList"  swiperSlide>
-        <ion-card (click)="descriptionPage(restaurant)"  >
+        <ion-card   >
           <img alt="Silhouette of mountains" src='{{restaurant.image}}'/>
           <ion-card-header>
-            <ion-card-title>{{restaurant.name}}</ion-card-title>
+            <ion-card-title>
+              {{restaurant.name}}
+              
+            </ion-card-title>
+            <ion-button (click)="descriptionPage(restaurant)">
+              <ion-icon  name="add"></ion-icon>
+            </ion-button>
           </ion-card-header>
         </ion-card>
       </ng-template>

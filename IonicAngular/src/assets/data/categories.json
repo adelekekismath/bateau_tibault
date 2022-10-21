@@ -35,6 +35,49 @@
                 "comments": "Plus de 1.5kg le poisson",
                 "owner": "tig"
             },
+           
+            {
+                "id": 8,
+                "name": "Huitres N°2 St Vaast",
+                "price": 38.0,
+                "unit": "4 Dz",
+                "availability": true,
+                "sale": false,
+                "discount": 0.0,
+                "comments": "",
+                "owner": "tig"
+            },
+            {
+                "id": 14,
+                "name": "Huîtres N°2 OR St Vaast",
+                "price": 24.0,
+                "unit": "2 Dz",
+                "availability": true,
+                "sale": false,
+                "discount": 0.0,
+                "comments": "Médaille d'or salon agriculture",
+                "owner": "tig"
+            },
+          
+            {
+                "id": 16,
+                "name": "Huîtres N°2 St Vaast",
+                "price": 19.0,
+                "unit": "2 Dz",
+                "availability": true,
+                "sale": false,
+                "discount": 0.0,
+                "comments": "",
+                "owner": "tig"
+            }
+            
+        ]
+
+    },
+
+    {
+        "name": "Fruit de mer",
+        "produts": [
             {
                 "id": 2,
                 "name": "Bar de ligne portion",
@@ -78,73 +121,13 @@
                 "discount": 0.0,
                 "comments": "Pêche à la corde",
                 "owner": "tig"
-            },
-            {
-                "id": 7,
-                "name": "Huitres N°2 St Vaast",
-                "price": 9.5,
-                "unit": "Dz",
-                "availability": true,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "",
-                "owner": "tig"
-            },
-            {
-                "id": 8,
-                "name": "Huitres N°2 St Vaast",
-                "price": 38.0,
-                "unit": "4 Dz",
-                "availability": true,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "",
-                "owner": "tig"
-            },
-            {
-                "id": 13,
-                "name": "Huîtres N°2 OR St Vaast",
-                "price": 12.0,
-                "unit": "Dz",
-                "availability": true,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "Médaille d'or Salon Agriculture",
-                "owner": "tig"
-            },
-            {
-                "id": 14,
-                "name": "Huîtres N°2 OR St Vaast",
-                "price": 24.0,
-                "unit": "2 Dz",
-                "availability": true,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "Médaille d'or salon agriculture",
-                "owner": "tig"
-            },
-            {
-                "id": 15,
-                "name": "Huîtres N°2 OR St Vaast",
-                "price": 48.0,
-                "unit": "4 Dz",
-                "availability": true,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "Médaille d'or salon agriculture",
-                "owner": "tig"
-            },
-            {
-                "id": 16,
-                "name": "Huîtres N°2 St Vaast",
-                "price": 19.0,
-                "unit": "2 Dz",
-                "availability": true,
-                "sale": false,
-                "discount": 0.0,
-                "comments": "",
-                "owner": "tig"
-            },
+            }
+        ]
+    },
+
+    {
+        "name":"Crustacé",
+        "products": [
             {
                 "id": 4,
                 "name": "Lieu jaune de ligne",
@@ -168,7 +151,6 @@
                 "owner": "tig"
             }
         ]
-
     }
 
 ]

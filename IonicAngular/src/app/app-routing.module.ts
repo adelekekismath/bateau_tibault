@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: 'home',
@@ -28,14 +29,38 @@ const routes: Routes = [
     path: 'boats',
     loadChildren: () => import('./boats/boats.module').then( m => m.BoatsPageModule)
   },
+
+  {
+    path: 'single-boat',
+    loadChildren: () => import('./single-boat/single-boat.module').then( m => m.SingleBoatPageModule)
+  },
+
+  {
+    path: 'category',
+    loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
+  },
+
+  {
+    path: 'products',
+    loadChildren: () => import('./products/products.module').then( m => m.ProductsPageModule)
+  },
+
+  {
+    path: 'shop',
+    loadChildren: () => import('./shop/shop.module').then( m => m.ShopPageModule)
+  },
+
   {
     path: 'recettes',
     loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
   },
+
   {
     path: 'single-recette',
     loadChildren: () => import('./single-recette/single-recette.module').then( m => m.SingleRecettePageModule)
   },
+
+
 
 ];
 

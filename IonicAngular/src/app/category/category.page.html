@@ -1,0 +1,14 @@
+<app-header [title]="'Liste des categories'" ></app-header>
+
+<ion-content>
+  <ion-card>  
+    <ion-card-header>  
+      Explorer les categories de produits 
+    </ion-card-header>  
+          
+    <ion-list *ngFor="let category of categoryList">  
+      <ion-item (click)="onLoadCategory(category.products)"> {{category.name}}</ion-item>                
+    </ion-list>  
+  </ion-card>  
+
+</ion-content>
