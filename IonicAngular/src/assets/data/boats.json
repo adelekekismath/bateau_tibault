@@ -2,35 +2,28 @@
 
     {
         "name": "Aquilon",
-        "image": "res://aquilon",
+        "image": "/assets/boatPage/aquilon.png",
         "description": "XXX YYY ZZZ",
         "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
     },
 
-    {
-        "name": "Bateau XYZ",
-        "image": "res://poulpe",
-        "description": "XXX YYY ZZZ",
-        "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
-
-    },
     {
         "name": "De la Brise",
-        "image": "res://deLaBrise",
+        "image": "/assets/boatPage/deLaBrise.png",
         "description": "XXX YYY ZZZ",
         "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
 
     },
     {
         "name": "Gast Micher",
-        "image": "res://gastMicher",
+        "image": "/assets/boatPage/gastMicher.png",
         "description": "XXX YYY ZZZ",
         "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
 
     },
     {
         "name": "Saphir",
-        "image": "res://saphir",
+        "image": "/assets/boatPage/saphir.png",
         "description": "XXX YYY ZZZ",
         "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
 

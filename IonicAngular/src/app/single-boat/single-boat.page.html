@@ -1,19 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>single-boat</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [title]="boat.name" ></app-header>
 
 <ion-content>
   <ion-card>
+    <img alt="" src="{{boat.image}}" />
     <ion-card-header>
-      {{boat.name}}
+      <ion-card-subtitle>{{boat.name}}</ion-card-subtitle>
     </ion-card-header>
+  
     <ion-card-content>
-      <p >
-        {{ boat.description}}
-      </p>
+      {{boat.details}}
     </ion-card-content>
-    
   </ion-card>
+  
 </ion-content>
