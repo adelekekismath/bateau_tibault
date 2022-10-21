@@ -17,7 +17,7 @@ const linking: LinkingOptions<RootStackParamList> = {
         screens: {
           TabOne: {
             screens: {
-              TabOneScreen: 'one',
+              HomeScreen: 'Home',
             },
           },
           Restaurant: {
@@ -25,12 +25,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               RestaurantScreen: 'Restaurant',
             },
           },
-          ProductsCategories: {
+          List: {
             screens: {
-              ProductsCategoriesScreen: 'ProductsCategories',
+              ListScreen: 'List',
             },
           },
-          
         },
       },
       Modal: 'modal',

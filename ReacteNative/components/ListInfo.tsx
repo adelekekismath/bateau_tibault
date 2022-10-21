@@ -6,24 +6,19 @@ import { RestaurantContextProvider } from '../contexts/RestaurantsContext';
 import navigation from '../navigation';
 import Navigation from '../navigation';
 
-export type Restaurant = {
+export type List = {
     name: string;
     description: string;
     image: string;
     
 };
 
-export type RestaurantProps = {
-    data : Restaurant ;
-    onPress: (Restaurant : Restaurant)=>void
+export type ListProps = {
+    data : List ;
+    onPress: (List : List)=>void
 };
 
-
-
-    
-
-
-export default function RestaurantInfo(props: RestaurantProps) {
+export default function ListInfo(props: ListProps) {
     return (
       <TouchableOpacity >
       <Card>
