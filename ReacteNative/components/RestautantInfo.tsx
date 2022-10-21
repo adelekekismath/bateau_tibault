@@ -1,10 +1,6 @@
 
 import React from 'react';
-import { Card } from 'react-bootstrap';
 import { TouchableOpacity } from 'react-native';
-import { RestaurantContextProvider } from '../contexts/RestaurantsContext';
-import navigation from '../navigation';
-import Navigation from '../navigation';
 
 export type Restaurant = {
     name: string;
