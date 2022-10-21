@@ -2,30 +2,29 @@
 
     {
         "name": "Aquilon",
-        "image": "https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?cs=srgb&dl=pexels-pixabay-163236.jpg&fm=jpg",
-        "description": "XXX YYY ZZZ",
-        "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAvn1Z5bv5xQEvuZ2V3IhcER6i11pjWFhUgw&usqp=CAU",
+        "details": "XXX YYY ZZZ",
+        "description": "Haec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum."
     },
-
     {
         "name": "De la Brise",
-        "image": "/assets/boatPage/deLaBrise.png",
-        "description": "XXX YYY ZZZ",
-        "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
+        "image": "https://static.actu.fr/uploads/2016/09/pniche.jpg",
+        "details": "XXX YYY ZZZ",
+        "description": "Haec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum."
 
     },
     {
         "name": "Gast Micher",
-        "image": "/assets/boatPage/gastMicher.png",
-        "description": "XXX YYY ZZZ",
-        "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
+        "image": "https://images.omerlocdn.com/resize?url=https%3A%2F%2Fgcm.omerlocdn.com%2Fproduction%2Fglobal%2Ffiles%2Fimage%2F30c1a73b-c5eb-491f-b47f-a9de8a4f6d73.jpg&width=1200&type=jpeg&stripmeta=true",
+        "details": "XXX YYY ZZZ",
+        "description": "Haec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum."
 
     },
     {
         "name": "Saphir",
-        "image": "/assets/boatPage/saphir.png",
-        "description": "XXX YYY ZZZ",
-        "details": "Qu'il est chaud le soleil&#x000a;Quand nous sommes en vacances&#x000a;Y a d' la joie, des hirondelles&#x000a;C'est le sud de la France&#x000a;Que de bonheur!"
+        "image": "https://cdn.shopify.com/s/files/1/0267/3550/9539/files/IMG_9055_900x.jpg?v=1614303023",
+        "details": "XXX YYY ZZZ",
+        "description": "Haec dum oriens diu perferret, caeli reserato tepore Constantius consulatu suo septies et Caesaris ter egressus Arelate Valentiam petit, in Gundomadum et Vadomarium fratres Alamannorum reges arma moturus, quorum crebris excursibus vastabantur confines limitibus terrae Gallorum."
 
     }
 ]
