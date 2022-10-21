@@ -1,9 +1,10 @@
-<app-header [title]="'Recettes'" ></app-header>
+<app-header [title]="'Liste de recettes'" ></app-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row *ngFor = "let recette of recettesList">
-    <ion-button fill="outline" (click)="onLoadRecette(recette)">{{recette.name}}</ion-button>
-    </ion-row>
-    </ion-grid>
+<ion-content padding>
+       <ion-item *ngFor="let recette of recettesList"  (click)="onLoadRecette(recette)">
+        <ion-thumbnail slot="start">
+          <img alt="recette" src="{{recette.image}}" />
+        </ion-thumbnail>
+        <ion-label>{{recette.name}}</ion-label>
+      </ion-item>
 </ion-content>

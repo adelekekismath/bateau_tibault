@@ -55,6 +55,11 @@ const routes: Routes = [
     loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
   },
 
+  {
+    path: 'single-recette',
+    loadChildren: () => import('./single-recette/single-recette.module').then( m => m.SingleRecettePageModule)
+  },
+
 
 
 ];
