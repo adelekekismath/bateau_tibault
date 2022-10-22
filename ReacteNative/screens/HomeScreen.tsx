@@ -1,8 +1,14 @@
-import { StyleSheet, TouchableOpacity } from 'react-native';
-import Button from 'react-bootstrap/Button';
-import EditScreenInfo from '../components/EditScreenInfo';
+import { StyleSheet, TouchableOpacity ,Image  } from 'react-native';
+import {Appbar, Avatar, Button } from "react-native-paper";
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import { IconButton, MD3Colors } from 'react-native-paper';
+import { First } from 'react-bootstrap/esm/PageItem';
+import { Container } from 'react-bootstrap';
+import { color } from '@rneui/base';
+import { black, transparent } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
+import { processFontFamily } from 'expo-font';
+
 
 export default function HomeScreen ({ navigation }: RootTabScreenProps<'Home'>) {
   const customDataRestaurant = require('../data/restaurants.json');
@@ -34,37 +40,100 @@ export default function HomeScreen ({ navigation }: RootTabScreenProps<'Home'>) 
 
   return (
    
-    <View style={styles.container}>
-      <TouchableOpacity onPress={() =>affichecomponent("restaurant")}> 
-      <Button variant="primary">Restaurant</Button>
+   <><Button icon="contacts" style={styles.contact} labelStyle={{color: 'black'}} onPress={() => navigation.navigate('Contact')}>Contact</Button>
+    <Container style={styles.container}>
+<Avatar.Image style={styles.image} size={200} source={require('../assets/images/log.png')} />
+     
+      <View style={{ flex: 0.5, flexDirection: 'row' , height: 100  , justifyContent : 'center' , backgroundColor:'none'}}>
+      <TouchableOpacity >
+        
+        <Button style= {styles.buttonblue} icon="cart" mode="contained"><Text style= {styles.Text}>Produits</Text></Button>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() =>affichecomponent("boat")}> 
-      <Button variant="primary">Bateau</Button>
+      <TouchableOpacity onPress={() => affichecomponent("restaurant")}>
+        <Button style= {styles.buttonbeige } icon="home" mode="contained">
+          <Text style= {styles.Text}>Restaurants</Text>
+        </Button>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() =>affichecomponent("recette")}> 
-      <Button variant="primary">Recette</Button>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() =>affichecomponent("boat")}> 
-      <Button variant="primary">Contact</Button>
-      </TouchableOpacity>
-    </View>
+    </View><View style={{ flex: 0.3, flexDirection: 'row', justifyContent : 'center' , backgroundColor:'none'}}>
+        <TouchableOpacity onPress={() => affichecomponent("boat")}>
+          <Button style= {styles.buttonbeige} icon="anchor" mode="contained">
+          <Text style= {styles.Text}>Bateau</Text>
+          </Button>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => affichecomponent("recette")}>
+          <Button style= {styles.buttonblue} icon="fish" mode="contained">
+          <Text style= {styles.Text}>Recettes</Text>
+          </Button>
+        </TouchableOpacity>
+      </View>
+      </Container>
+      </>
   );
+  
 }
+
 
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    fontFamily : 'Fjalla One',
+    marginTop : '30%',
+    textAlign : 'center'
+  },
+  boat :{
+   height : '100%',
+
   },
   title: {
-    fontSize: 20,
+    fontSize: 100,
     fontWeight: 'bold',
+  },
+  buttonblue: {
+    height : 85,
+    width : 150,
+   textAlign : First,
+   margin : 5,
+   backgroundColor : '#b8c2d7'
+  },
+  buttonbeige : {
+    height : 85,
+    width : 150,
+    textAlign : First,
+    margin : 5,
+    backgroundColor : '#d1d1d1',
+    alignContent:'flex-end'
+  },
+  Text : {
+  fontSize : 15,
+  marginTop : 10
+  },
+  image : {
+    width: 200,
+    height : 200,
+    display : 'flex',
+   marginLeft : 'auto',
+   marginRight : 'auto',
+   marginBottom : 50,
+   backgroundColor : 'none'
   },
   separator: {
     marginVertical: 30,
     height: 1,
     width: '80%',
   },
+  textbienvenue : {
+    
+    marginLeft : '10%',
+    color : '#428cff',
+    fontSize : 21,
+   fontWeight : 'bold'
+  },
+  contact : {
+    fontWeight : 'bold',
+    fontSize : 25,
+    marginLeft : 250,
+    flexDirection: 'row-reverse'
+  }
 });

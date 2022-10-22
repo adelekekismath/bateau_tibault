@@ -1,10 +1,9 @@
 import { useRoute } from "@react-navigation/native";
 import React from "react";
-import { View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
 import { SafeAreaView, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
-
-import { Card, FAB, Button, Title } from "react-native-paper";
+import { Text, View } from '../components/Themed';
+import { Card, FAB, Button, Title, Appbar, IconButton, MD3Colors } from "react-native-paper";
 import { white } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 
@@ -12,21 +11,37 @@ import { white } from "react-native-paper/lib/typescript/styles/themes/v2/colors
 export default function ListScreen ({ navigation }: RootTabScreenProps<'List'>) {
     const route = useRoute(); 
     const savelementinformation= (_Object: any)=>{return navigation.navigate("SingleElement" ,_Object) };
+    const _goBack = () => navigation.navigate('Home'); 
+
     return (
-       console.log("Hi"),
+      <>
+       <Appbar.Header>
+        <Appbar.BackAction onPress={_goBack} />
+      </Appbar.Header>
+      <Text style={styles.text} > 
+      <p style={{fontWeight:'bold'}}>Nos Partenaires</p>
+      
+        <br/>06.63.99.99.78
+        <br/>
+lebateaudethibault@gmail.com
+www.facebook.com/lebateaudethibault</Text>
        <SafeAreaView   style={styles.container} >
-       <ScrollView style={styles.contentContainer} horizontal={true} >
+       <ScrollView persistentScrollbar={true} pagingEnabled showsHorizontalScrollIndicator={true} style={styles.contentContainer} horizontal={true} >
 
        {route.params.map((userData) => {
             return  (
-                <TouchableOpacity style={styles.contentContainer} onPress={() =>savelementinformation(userData)} >
+                <TouchableOpacity onPress={() =>savelementinformation(userData)} >
      
-                 <Card style={styles.Card}> <Button icon="plus" > </Button>
+                 <Card style={styles.Card}> 
+                 {/* <Button icon="plus" > </Button> */}
+                 <IconButton
+    icon="plus"
+    size={20}
+    iconColor={MD3Colors.error50}
+  />
     <Card.Title title={userData.name} />
-             {/* <Card.Content>
-      <Title>{userData.name}</Title>
-    </Card.Content> */}
-    <Card.Cover source={{ uri: userData.image }}/>
+            
+    <Card.Cover style={styles.Card_image} source={{ uri: userData.image }}/>
   </Card>
               </TouchableOpacity>
               
@@ -34,41 +49,49 @@ export default function ListScreen ({ navigation }: RootTabScreenProps<'List'>) 
             }
         </ScrollView>
         </SafeAreaView>
-      
+        </>
     );
       }
 
       const styles = StyleSheet.create({
-        fab: {
-            position: 'absolute',
-            margin: 16,
-            right: 0,
-            bottom: 0,
-            color:'white'
-          },
+       
         container: {
-          flex: 1,
+          flex: 3,
           alignItems: 'center',
           justifyContent: 'center',
+          textAlign : 'center'
         },
         title: {
           fontSize: 20,
           fontWeight: 'bold',
         },
+        text: {
+        marginTop:'10%',
+        textAlign : 'center',
+        color: 'black',
+        },
         Card : {
-        
-        width : '80%',
-         marginRight : '-20%'
+        borderRadius : 30,
+        width : 180,
+         marginRight : '10%',
+         height: 400
         },
         contentContainer: {
-            height: 0.8,
-            width: '90%',
-        
+          height: "80%",
+            width: '100%',
+            marginTop : '10%',
+
         },
         scrollView: {
             marginHorizontal: 20,
             paddingVertical: 20 , 
             paddingHorizontal : 20 
           },
+          Card_image : {
+            flex: 1,
+            margin : 10,
+            justifyContent: 'center',
+            borderRadius : 10
+          }
       });
       

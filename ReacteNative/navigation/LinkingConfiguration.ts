@@ -20,14 +20,14 @@ const linking: LinkingOptions<RootStackParamList> = {
               HomeScreen: 'Home',
             },
           },
-          Restaurant: {
-            screens: {
-              RestaurantScreen: 'Restaurant',
-            },
-          },
           List: {
             screens: {
               ListScreen: 'List',
+            },
+          },
+          Contact: {
+            screens: {
+              ListScreen: 'ContactScreen',
             },
           },
         },

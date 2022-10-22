@@ -11,12 +11,11 @@ import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+import ContactScreen from '../screens/ContactScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ListScreen from '../screens/ListScreen';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import RestaurantScreen from '../screens/RestaurantScreen';
-import RestaurantSingleScreen from '../screens/RestaurantSingleScreen';
 import SingleScreen from '../screens/SingleScreen';
 
 import TabOneScreen from '../screens/TabOneScreen';
@@ -28,7 +27,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      theme={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
       <RootNavigator />
     </NavigationContainer>
   );
@@ -43,12 +42,11 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
-      <Stack.Screen name="Restaurant" component={RestaurantScreen}  />
-      <Stack.Screen name="RestaurantSingle" component={RestaurantSingleScreen}  />
-      <Stack.Screen name="Home" component={HomeScreen}  />
-      <Stack.Screen name="List" component={ListScreen}  />
-      <Stack.Screen name="SingleElement" component={SingleScreen}  />
+     
+      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="List" component={ListScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="SingleElement" component={SingleScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Contact" component={ContactScreen} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
@@ -63,39 +61,31 @@ function RootNavigator() {
  */
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
-function BottomTabNavigator() {
-  const colorScheme = useColorScheme();
+// function BottomTabNavigator() {
+//   const colorScheme = useColorScheme();
 
-  return (
-    <BottomTab.Navigator
-      initialRouteName="Home"
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
-      }}>
-      <BottomTab.Screen
-        name="Home"
-        component={HomeScreen}
-      />
-      <BottomTab.Screen
-        name="Restaurant"
-        component={RestaurantScreen}
-        options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
-       <BottomTab.Screen
-        name="List"
-        component={ListScreen}
-        options={{
-          title: 'List',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
+//   return (
+//     <BottomTab.Navigator
+//       initialRouteName="Home"
+//       screenOptions={{
+//         tabBarActiveTintColor: Colors[colorScheme].tint,
+//       }}>
+//       <BottomTab.Screen
+//         name="Home"
+//         component={HomeScreen}
+//       />
+//        <BottomTab.Screen
+//         name="List"
+//         component={ListScreen}
+//         options={{
+//           title: 'List',
+//           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+//         }}
+//       />
       
-    </BottomTab.Navigator>
-  );
-}
+//     </BottomTab.Navigator>
+//   );
+// }
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
