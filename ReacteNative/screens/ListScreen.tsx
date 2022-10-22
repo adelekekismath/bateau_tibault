@@ -3,7 +3,7 @@ import React from "react";
 import { RootTabScreenProps } from "../types";
 import { SafeAreaView, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
-import { Card, FAB, Button, Title, Appbar, IconButton, MD3Colors } from "react-native-paper";
+import { Card, FAB, Button, Title, Appbar, IconButton, MD3Colors, Avatar } from "react-native-paper";
 import { white } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 
@@ -11,14 +11,23 @@ import { white } from "react-native-paper/lib/typescript/styles/themes/v2/colors
 export default function ListScreen ({ navigation }: RootTabScreenProps<'List'>) {
     const route = useRoute(); 
     const savelementinformation= (_Object: any)=>{return navigation.navigate("SingleElement" ,_Object) };
-    const _goBack = () => navigation.navigate('Home'); 
+    const _goBack = () => navigation.goBack(); 
 
     return (
       <>
-       <Appbar.Header>
-        <Appbar.BackAction onPress={_goBack} />
-      </Appbar.Header>
-      <Text style={styles.text} > 
+            <Appbar.Header>
+      <Appbar.BackAction onPress={_goBack} />
+
+      <TouchableOpacity style={{margin: 'auto'}} onPress={()=>{navigation.push('Home')}}>
+                  <Avatar.Image 
+                      size={40}
+                      source={require('../assets/images/log.png')}
+                  />
+              </TouchableOpacity>
+      
+      <Appbar.Action icon="home" onPress={()=>{navigation.push('Home')}} />
+    </Appbar.Header>
+      <Text style={styles.text}  > 
       <p style={{fontWeight:'bold'}}>Nos Partenaires</p>
       
         <br/>06.63.99.99.78
