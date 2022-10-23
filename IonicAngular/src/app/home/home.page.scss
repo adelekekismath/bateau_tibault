@@ -3,14 +3,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
 
 #container p {
   font-size: 16px;
@@ -18,22 +12,36 @@
   color: #8c8c8c;
   margin: 0;
 }
-
-#container a {
-  text-decoration: none;
-}
-#toolbar{
-  margin-top: 15%;
-  margin-bottom: 10%;
-}
-
 ion-icon{
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 ion-button{
   margin-top: 20%;
   margin-top: 20%;
   width: 100%;
   height: 100%;
+}
+ion-row {
+  height: 400;
+
+}
+ion-button {
+  height: 400;
+}
+ion-toolbar{
+  margin-top: 0%;
+  color: none;
+}
+img{
+  width: 500;
+  height: 500;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  
+}
+#toolbar{
+  display: flex;
+  justify-content: right;
+  margin-right: 200;
 }
