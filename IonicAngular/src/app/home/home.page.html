@@ -1,27 +1,23 @@
 
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
-
+  <div id="toolbar" >
+   <p>Contact  <ion-icon style="text-transform:none!important;width: 10;height: 10;" name="person-circle-outline" (click)="onGoToPage('/contact')"></ion-icon> </p>
+    </div>
   <div id="container"  >
     <!-- ToolBar -->
-    <ion-toolbar id="toolbar">
-      <ion-title slot="start" color="primary"><h1>Bienvenue</h1></ion-title>
-      <ion-buttons slot="end">
-        <ion-button style="text-transform:none!important;" (click)="onGoToPage('/contact')">
-          <p>Contact</p>
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
+    
  <!-- ToolBar -->
-      <img src="../assets/log.png" width="150px" style="display:inline-block" height="150px"/>
+      <img src="../assets/log.png"  style="display:inline-block"/>
       
- <ion-grid>
+ <ion-grid >
     <ion-row fixed padding>
       <ion-col>
         <ion-button style="text-transform:none!important;" (click)="onGoToPage('/category')" color="bleubutton">Produits<ion-icon name="cart-outline"></ion-icon></ion-button>
-  
+        <br />
+        <br />
+        <br />
+        <br />
       </ion-col>
 <ion-col>
   <ion-button style="text-transform:none!important;" color="beige" (click)="onGoToPage('/restaurants')">Restaurants<ion-icon name="restaurant-outline"></ion-icon></ion-button>
@@ -31,7 +27,10 @@
 <ion-row>
   <ion-col>
     <ion-button style="text-transform:none!important;" (click)="onGoToPage('/boats')" color="beige">Bateaux<ion-icon name="boat-outline"></ion-icon></ion-button>
- 
+    <br />
+    <br />
+    <br />
+    <br />
   </ion-col>
  <ion-col>
   <ion-button style="text-transform:none!important;" (click)="onGoToPage('/recettes')"  color="bleubutton">Recettes<ion-icon name="fish-outline"></ion-icon></ion-button>

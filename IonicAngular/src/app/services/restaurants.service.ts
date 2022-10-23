@@ -10,7 +10,7 @@ export class RestaurantsService {
 
   getRestaurants()
   {
-    return this.http.get('assets/data/restaurants.json');
+    return this.http.get('./assets/data/restaurants.json');
   }
 
 }
