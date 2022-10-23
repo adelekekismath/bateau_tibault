@@ -1,9 +1,20 @@
 
 
 <ion-content [fullscreen]="true">
-  <div id="toolbar" >
-   <p>Contact </p>
-    </div>
+ <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button color="primary">
+      Bienvenue
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="end" >
+    <ion-button (click)="onGoToPage('/contact')"  color="light" fill="clear">
+      Contact
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+ 
   <div id="container"  >
     <!-- ToolBar -->
     
