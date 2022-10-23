@@ -36,5 +36,21 @@ export class CategoryPage implements OnInit {
     this.router.navigate(['/products'], navigationExtras);
   }
 
+  onGoToCart(){
+    this.router.navigate(['/shop']);
+  }
+
+  getProductsOnPromotions() {
+    let products: produitModel[]=[];
+    this.categoryList.forEach(category  => {
+      category.products.forEach(product => {
+        if (product.discount > 0) {
+          products.push(product);
+        }
+      });
+    });
+    return products;
+  }
+
 
 }

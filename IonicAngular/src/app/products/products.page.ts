@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { produitModel } from '../models/produitModel';
 import { CartService } from '../services/cart.service';
 
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.page.html',
@@ -13,7 +12,7 @@ export class ProductsPage implements OnInit {
 
   productsList: produitModel[];
 
-  constructor(private cartService: CartService, private route: ActivatedRoute  , private router: Router) {
+  constructor( private cartService: CartService, private route: ActivatedRoute  , private router: Router) {
     if(this.router.getCurrentNavigation().extras.state){
       this.productsList = this.router.getCurrentNavigation().extras.state.products;
     }

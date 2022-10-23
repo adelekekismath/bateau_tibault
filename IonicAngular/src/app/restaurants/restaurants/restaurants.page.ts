@@ -28,6 +28,6 @@ export class RestaurantsPage implements OnInit {
     this.router.navigate(['/single-restaurant'],navigationExtras)
   }
    
-  
+
 
 }

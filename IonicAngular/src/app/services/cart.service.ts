@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { produitModel } from '../models/produitModel';
-import {Storage} from '@ionic/storage-angular'
+import {Storage} from '@ionic/storage-angular';
+import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
 
 const STORAGE_KEY = 'productsListOnCart';
 @Injectable({
@@ -8,18 +9,22 @@ const STORAGE_KEY = 'productsListOnCart';
 })
 export class CartService {
 
-  constructor(private storage: Storage) { }
+  constructor(private storage: Storage) {
+    this.ngOnInit();
+   }
 
-  ngOnInit() {
-    this.storage.create();
+  async ngOnInit() {
+    await this.storage.create();
+    await this.storage.defineDriver(CordovaSQLiteDriver);
+
   }
 
-  getAllProductsOnCart() {
-    this.storage.create();
-    return this.storage.get(STORAGE_KEY);
+  async getAllProductsOnCart() {
+     const result= await this.storage.get(STORAGE_KEY);
+     return result; 
   }
  
-  async isAlreadyOnCart(product: produitModel) {
+  async isAlreadyOnCart(product: produitModel,) {
     const result = await this.getAllProductsOnCart();
     let index:number= null;
     if(result){
@@ -37,44 +42,46 @@ export class CartService {
       return null;
   }
  
-  async addProduct(product: produitModel) {
-    this.storage.create();
-    const result = await this.getAllProductsOnCart();
+  async addProduct(product: produitModel,) {
+    
+    var result = await this.getAllProductsOnCart();
     if (result) {
       let productIndex= await this.isAlreadyOnCart(product);
       if(productIndex!=null)
-          result[<any>productIndex].quantity += 1;
+          result[productIndex].quantity += 1;
       else
         result.push({ ...product, "quantity": 1 });
-      return this.storage.set(STORAGE_KEY, result);
+      console.log(productIndex);  
+      
+      await this.storage.set(STORAGE_KEY, result);
+    
       
     } else 
-        return this.storage.set(STORAGE_KEY, [{ ...product, "quantity": 1 }]);
+      await this.storage.set(STORAGE_KEY, [{ ...product, "quantity": 1 }]);
      
   }
 
-  async decreaseProduct(product: produitModel) {
-    this.storage.create();
-    const result = await this.getAllProductsOnCart();
+  async decreaseProduct(product: produitModel,) {
+    var result = await this.getAllProductsOnCart();
     if (result) {
       let productIndex= await this.isAlreadyOnCart(product);
       if(productIndex!=null){
-        result[<any>productIndex].quantity -= 1;
-          if(result[<any>productIndex].quantity)
-            result.splice(productIndex, 1);
-        return this.storage.set(STORAGE_KEY, result);
+        result[productIndex].quantity -= 1;
+          if(result[productIndex].quantity==0)
+            result.splice(productIndex,1);
+            await this.storage.set(STORAGE_KEY, result);
       }
     }
   }
  
-  async removeFromCart(product: produitModel) {
-    this.storage.create();
-    const result = await this.getAllProductsOnCart();
+  async removeFromCart(product: produitModel,) {
+    var result = await this.getAllProductsOnCart();
     if (result) {
-      var index = this.isAlreadyOnCart(product);
-      if(index){
-        result.splice(index, 1);
-        return this.storage.set(STORAGE_KEY, result);
+      var index = await this.isAlreadyOnCart(product);
+      if(index!=null){
+        console.log("kiss")
+        result.splice(index,1);
+        await this.storage.set(STORAGE_KEY, result);
       }
         
     }

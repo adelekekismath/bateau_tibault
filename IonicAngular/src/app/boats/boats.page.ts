@@ -3,6 +3,9 @@ import { NavigationExtras, Router } from '@angular/router';
 import { Boat } from '../models/boats';
 import { BoatsService } from '../services/boats.service';
 
+import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
+SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
+
 @Component({
   selector: 'app-boats',
   templateUrl: './boats.page.html',

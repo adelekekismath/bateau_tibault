@@ -2,7 +2,7 @@
 
 <ion-content>
   <ion-card>
-    <img alt="Image pas compatible" src="https://img.freepik.com/photos-premium/poisson-frit-dans-assiette-blanche-fond-blanc_51524-21422.jpg" />
+    <img alt="Image pas compatible" [src]="recette.image" />
     <ion-card-header>
       <ion-card-title>{{recette.name}}</ion-card-title>
       <ion-card-subtitle>{{recette.description}}</ion-card-subtitle>

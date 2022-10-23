@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { Recette } from '../models/recette';
 import { RecettesService } from '../services/recettes.service';
+import SwiperCore, { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
+SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
 
 @Component({
   selector: 'app-recettes',

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { produitModel } from '../models/produitModel';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
+import { RestaurantsService } from 'src/app/services/restaurants.service';
 
 
 
@@ -13,33 +14,44 @@ import { CartService } from '../services/cart.service';
 export class ShopPage implements OnInit {
 
   productsListOnCart: any[];
-
-  constructor(private cartService: CartService, private route: ActivatedRoute  , private router: Router) {
-    this.ngOnInit();
+  restaurantsList : object ; 
+  constructor(private cartService: CartService, private route: ActivatedRoute,private restaurantService: RestaurantsService  , private router: Router) {}
+  
+  ngOnInit() {
+    this.restaurantService.getRestaurants().subscribe( res => {
+      this.restaurantsList = <any>res;
+    });
+   this.updateCart();
   }
 
-
-
-  async ngOnInit() {
-    this.productsListOnCart =  await this.cartService.getAllProductsOnCart();
+  updateCart(){
+    this.cartService.getAllProductsOnCart().then((val) => {
+			this.productsListOnCart = val;
+		});
+  
   }
 
-
-  decreaseCartItem(product:produitModel) {
-    this.cartService.decreaseProduct(product);
+  async decreaseCartItem(product) {
+   await this.cartService.decreaseProduct(product);
+   this.updateCart();
   }
 
-  increaseCartItem(product) {
-    this.cartService.addProduct(product);
+  async increaseCartItem(product) {
+    await this.cartService.addProduct(product);
+    this.updateCart();
   }
 
-  removeCartItem(product) {
-    this.cartService.removeFromCart(product);
+  async removeCartItem(product) {
+    await this.cartService.removeFromCart(product);
+    this.updateCart();
+   
   }
 
   getTotal() {
     return this.productsListOnCart.reduce((i, j) => i + j.price * j.quantity, 0);
   }
+
+
 
 
 }

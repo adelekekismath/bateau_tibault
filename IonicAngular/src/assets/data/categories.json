@@ -77,7 +77,7 @@
 
     {
         "name": "Fruit de mer",
-        "produts": [
+        "products": [
             {
                 "id": 2,
                 "name": "Bar de ligne portion",
@@ -85,7 +85,7 @@
                 "unit": "pièce",
                 "availability": true,
                 "sale": false,
-                "discount": 0.0,
+                "discount": 15.0,
                 "comments": "Environ 550-700g la pièce",
                 "owner": "tig"
             },
@@ -96,7 +96,7 @@
                 "unit": "100g",
                 "availability": false,
                 "sale": false,
-                "discount": 0.0,
+                "discount": 2.0,
                 "comments": "Hors saison, pêche à l'épuisette",
                 "owner": "tig"
             },
@@ -118,7 +118,7 @@
                 "unit": "kg",
                 "availability": false,
                 "sale": false,
-                "discount": 0.0,
+                "discount": 10.0,
                 "comments": "Pêche à la corde",
                 "owner": "tig"
             }

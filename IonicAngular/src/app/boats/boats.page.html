@@ -1,12 +1,38 @@
 <app-header [title]="'Liste de bateaux'" ></app-header>
 
 <ion-content padding>
-       <ion-item *ngFor="let boat of boatsList"  (click)="onLoadBoat(boat)">
-        <ion-thumbnail slot="start">
-          <img alt="boat" src="{{boat.image}}" />
-        </ion-thumbnail>
-        <ion-label>{{boat.name}}</ion-label>
-      </ion-item>
+
+  <swiper
+    class="banner-slides"
+    [autoplay]="true"
+    [keyboard]="true"
+    [pagination]="true"
+    [scrollbar]="true"
+    [zoom]="true"
+  >
+    <ng-template *ngFor="let boat of boatsList" swiperSlide>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="{{boat.image}}" />
+        <ion-card-header>
+          <ion-card-title> {{boat.name}} </ion-card-title>
+          <ion-button (click)="onLoadBoat(boat)">
+            <ion-icon name="add"></ion-icon>
+          </ion-button>
+        </ion-card-header>
+      </ion-card>
+    </ng-template>
+  </swiper>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" offset="5">
+        <ion-img
+          style="width: 55%; align-content: center !important"
+          src="../assets/points-de-suspension-a-trois-points.png"
+        ></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
         
   
 </ion-content>
