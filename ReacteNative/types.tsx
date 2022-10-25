@@ -21,7 +21,10 @@ export type RootStackParamList = {
   Home : undefined; 
   List : undefined; 
   SingleElement : undefined;
-  Contact : undefined
+  Contact : undefined;
+  Category:undefined;
+  ProductsList:undefined;
+  Cart : undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -35,7 +38,10 @@ export type RootTabParamList = {
   Home : undefined; 
   List : undefined; 
   SingleElement : undefined; 
-  Contact : undefined
+  Contact : undefined;
+  Category:undefined;
+  ProductsList:undefined;
+  Cart : undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<

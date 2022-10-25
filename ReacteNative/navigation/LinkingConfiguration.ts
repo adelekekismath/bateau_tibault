@@ -30,6 +30,21 @@ const linking: LinkingOptions<RootStackParamList> = {
               ListScreen: 'ContactScreen',
             },
           },
+          Category: {
+            screens: {
+              ProductsCategoriesScreen: 'Category',
+            },
+          },
+          ProductsList: {
+            screens: {
+              ProductsListScreen: 'ProductsList',
+            },
+          },
+          Cart: {
+            screens: {
+              CartScreen: 'Cart',
+            },
+          },
         },
       },
       Modal: 'modal',

@@ -9,13 +9,18 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
+import { lightBlue100 } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
 import Colors from '../constants/Colors';
+import { CartContextProvider, CreateCartContext, Product } from '../contexts/CartContext';
 import useColorScheme from '../hooks/useColorScheme';
+import CartScreen from '../screens/CartScreen';
 import ContactScreen from '../screens/ContactScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ListScreen from '../screens/ListScreen';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
+import ProductsCategoriesScreen from '../screens/ProductsCategoriesScreen';
+import ProductsListScreen from '../screens/ProductsListSreen';
 import SingleScreen from '../screens/SingleScreen';
 
 import TabOneScreen from '../screens/TabOneScreen';
@@ -23,12 +28,16 @@ import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
+
+const contextObject = CreateCartContext<Product>();
+
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
-      linking={LinkingConfiguration}
-      theme={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
+      linking={LinkingConfiguration}>
+         <CartContextProvider<Product> context={contextObject}>
       <RootNavigator />
+      </CartContextProvider>
     </NavigationContainer>
   );
 }
@@ -45,6 +54,9 @@ function RootNavigator() {
      
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
       <Stack.Screen name="List" component={ListScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Cart" component={CartScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Category" component={ProductsCategoriesScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="ProductsList" component={ProductsListScreen} options={{ headerShown: false }} />
       <Stack.Screen name="SingleElement" component={SingleScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Contact" component={ContactScreen} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
@@ -52,6 +64,7 @@ function RootNavigator() {
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
     </Stack.Navigator>
+
   );
 }
 
